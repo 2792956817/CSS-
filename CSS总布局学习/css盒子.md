@@ -4,8 +4,32 @@
  ## 一、css盒子模型
 
 ### 1.1盒子模型的使用
- ```html
-<div></div>
+**实例**
+```html
+        div:nth-of-type(1) input{
+            border: 3px solid red;
+            border-radius: 20px;
+        }
+        div:nth-of-type(2) input{
+            border: 1px dashed black;
+        }
+        div:nth-of-type(3) input{
+            border: 2px groove yellowgreen;
+        }
+        <form action="#">
+            <div>
+                <span>用户名：</span>
+                <input type="text" >
+            </div>
+            <div>
+                <span>密码：</span>
+                <input type="password" >
+            </div>
+            <div>
+                <span>邮箱：</span>
+                <input type="text" >
+            </div>
+        </form>
 ```
 
 ### 1.2盒子内外边距
@@ -67,6 +91,61 @@ dottef|点线
         </div>
     </div>
 ```
+### 1.3圆角边框
 
+- border-radius用于美化四角的弧度
 
+```html
+        }
+        .two{
+            /* 正方形 */
+            width: 30px;
+            height: 30px;
+            float: right;
+            border: 3px solid pink;
+        }
+        .one{
+            /* 扇形 */
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            float: right;
+            border-radius: 15px 0 0 0 ;
+        }
+        .three{
+            /* 半圆 */
+            width: 30px;
+            /* height: 30px; */
+            height: 15px;
+            background-color: blue;
+            float: right;
+            border-radius: 15px 15px 0 0;
+        }
+        h2 > div{
+            /* 圆形 */
+            width: 30px;
+            height: 30px;
+            background-color: green;
+            float: right;
+            border-radius: 15px;
+        }
+            <div></div>
+            <span class="three"></span>
+            <span class="one"></span>
+            <span class="two"></span>
+```
 
+### 1.4边框阴影
+- box-shadow: x轴平移 Y轴平移 模糊度 颜色
+```html
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+            box-shadow: 10px 10px 5px yellow;
+            /* box-shadow: x轴平移 Y轴平移 模糊度 颜色 */
+        }
+    </style>
+     <div></div>
+```
