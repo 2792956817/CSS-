@@ -75,7 +75,7 @@ none|可以让元素失效
 ```
 
 ## 浮动
-- float
+- float 
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -134,4 +134,17 @@ div{
     float: right;
     clear: both;
 }
+```
+## 取消浮动
+- clear 属性规定元素的哪一侧不允许其他浮动元素 。
+
+属性|作用
+--|---
+none|允许浮动元素（默认值）
+left|左侧不允许浮动
+right|右侧不允许浮动
+both|两侧均不允许浮动
+
+```txt
+与display配合使用，出现图片固定一侧取消浮动
 ```
