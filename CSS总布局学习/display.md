@@ -12,6 +12,13 @@ span a img strong .....
 _行内元素可以被块级元素包含，块级元素不能被行级元素包含_
 
 ## display
+常用元素|作用
+---|---
+block|可以让行内元素 变成块级元素
+inline|可以让元素变成行级元素
+inline-block|也是一个块级元素，但是可以内联合在一行
+none|可以让元素失效
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -21,12 +28,6 @@ _行内元素可以被块级元素包含，块级元素不能被行级元素包�
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 
-            block 可以让行内元素 变成块级元素
-            inline 可以让元素变成行级元素
-            inline-block 也是一个块级元素，但是可以内联合在一行
-            none 可以让元素失效
-        */
         .div1{
             width: 100px;
             height: 100px;
@@ -51,12 +52,23 @@ _行内元素可以被块级元素包含，块级元素不能被行级元素包�
             border: 2px solid red;
             display: block;
         }
+        p{
+            width: 150px;
+            height: 150px;
+            text-align:center;
+            line-height: 150px;
+            background-color: pink;
+            border: 2px dotted black;
+        }
     </style>
 </head>
 <body>
     <div class="div1"> div块元素</div>
     <div class="div2"> div块元素</div>
-    <div class="div3"> div块元素</div>
+    <p>
+        中间的div失效
+        <div class="div3"> div块元素</div>
+    </p>
     <span>span行内元素</span>
 </body>
 </html>
